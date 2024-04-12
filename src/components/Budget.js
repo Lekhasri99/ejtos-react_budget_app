@@ -14,7 +14,11 @@ const Budget = () => {
         // Check if the input matches the pattern (only numeric)
         if (inputRegex.test(newValue)) {
             const parsedValue = parseInt(newValue);
+<<<<<<< HEAD
             if (parsedValue <= maxBudget) {
+=======
+            if (parsedValue <= 20000 ) {
+>>>>>>> 3a56476acf933e5a2afb4909617769e85153a711
                 setNewBudget(parsedValue); // Update the state with the new numeric value
             } else {
                 alert("Budget cannot exceed 20,000");
@@ -22,6 +26,7 @@ const Budget = () => {
         } else {
             alert("Please enter a valid number");
         }
+<<<<<<< HEAD
     };
     
     return (
@@ -37,6 +42,22 @@ const Budget = () => {
         />
 
     </div>
+=======
+    }
+    return (
+<div className='alert alert-secondary'>
+<span>Budget: £</span>
+{/* <input type="number" step="10" value={newBudget} max="20,000" onChange={handleBudgetChange}></input> */}
+<input 
+    type="number" 
+    step="10" 
+    value={parseInt(newBudget)} 
+    max={20000} 
+    onChange={handleBudgetChange} 
+/>
+
+</div>
+>>>>>>> 3a56476acf933e5a2afb4909617769e85153a711
     );
 };
 export default Budget; 
